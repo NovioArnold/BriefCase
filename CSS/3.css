@@ -1,0 +1,31 @@
+
+
+
+h1{
+  font-size: 50px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.ondertiteling{
+  font-size: 20px;
+  font-family:  cursive;
+  padding-top: -50px;
+  text-align: center;
+}
+
+.verslag{
+  font-size: 30px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.onderzoek{
+  font-size: 40px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.lijst{
+  font-family: cursive;
+}

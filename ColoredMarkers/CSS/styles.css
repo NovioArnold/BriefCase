@@ -1,0 +1,48 @@
+h1 {
+  text-align: center;
+}
+
+.container{
+  background-color: rgb(255, 255, 255);
+  padding: 10px 0;
+}
+
+.marker{
+  margin: 15px auto;
+  width: 200px;
+  hight: 25px;
+}
+
+.red {
+  background-color: rgb(255, 0, 0);
+}
+
+.green {
+  background-color: rgb(0, 125, 0);
+}
+
+.bleu {
+  background-color: rgb(0, 0, 255);
+}
+
+.yellow {
+  background-color: rgb(255, 255, 0);
+}
+
+.cyan {
+  background-color: rgb(0, 255, 255);
+}
+.magenta {
+  background-color: rgb(255, 0, 255);
+}
+.grb-linear-gradient {
+  background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+}
+
+.hex-linear-gradient {
+  background: linear-gradient(#55680D, #71F53E, #116C31);
+}
+
+.hsl-linear-gradient {
+  background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+}
