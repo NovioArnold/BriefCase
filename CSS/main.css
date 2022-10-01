@@ -1,32 +1,61 @@
-h1, h2, h3, h4{
+body {
+  background-color: #1b1b32;
+  color: #f5f6f7;
+  padding: 200px;
+  border: #fff 3px solid;
+  border-radius: 3em;
+}
 
-  font-family: sans-serif;
+h1, h2, h3, h4, p {
+
+  font-family: serif;
   text-align: center;
 }
 
 
-h1{
+h1 {
   font-size: 50px;
 }
 
-.ondertiteling{
-  font-size: 20px;
-  font-family:  cursive;
-  text-align: center;
-}
-
-.verslag{
-  font-size: 30px;
-  font-family: sans-serif;
-  text-align: center;
-}
-
-.onderzoek{
+h2 {
   font-size: 40px;
-  font-family: sans-serif;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 20px;
+}
+p {
+  font-size: 12px;
+}
+li {
+  text-align: start;
+}
+
+.ondertiteling {
+  font-family:  serif;
+  font-style: italic;
+  text-align: center;
+  opacity: 50%;
+}
+
+.verslag {
+  font-size: 30px;
+  font-family: serif;
   text-align: center;
 }
 
-.lijst{
-  font-family: cursive;
+.onderzoek {
+  font-size: 40px;
+  font-family: serif;
+  text-align: center;
+}
+
+.lijst {
+  font-family: serif;
+  text-align: center;
+  font-style: oblique;
 }
