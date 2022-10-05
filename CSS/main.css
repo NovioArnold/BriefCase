@@ -60,3 +60,7 @@ li {
   text-align: center;
   font-style: oblique;
 }
+
+a:hover{
+  color: #fff;
+}

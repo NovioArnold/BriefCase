@@ -1,0 +1,12 @@
+
+
+body {
+    display: grid;
+    background-color: #3c5e80;
+    grid-template-columns: 
+    'header, header, header'
+    'left, nav, nav'
+    'left, content, right'
+    'left, foot, right'
+    ;
+}
