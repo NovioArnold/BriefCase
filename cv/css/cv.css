@@ -1,0 +1,26 @@
+body {
+  font-family: TimesNewRoman, sans-serif;
+  background-color: #00a4c44a;
+
+}
+
+.flex-container {
+  display: flex;
+  padding: 30px;
+  flex-direction: row;
+}
+
+.box{
+ display: flex;
+}
+
+ .title {
+   text-align: center;
+ }
+
+.personalia, .vaardigheden, .profiel, .werkervaring, .title, .image, body {
+  border-radius: : 2px;
+  border-color: #00ccee;
+  border-style: solid;
+  padding: 0 10px 0 10px
+}
