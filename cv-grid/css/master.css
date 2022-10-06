@@ -1,9 +1,12 @@
+
+/*window reset*/
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
+  /*main window style*/
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
   width:fit-content;
@@ -16,7 +19,10 @@ body {
   }
 
   h1 {
+    margin-top: 1em;
     font-size: 50px;
+    font-weight: bold;
+    color: #00a4c4;
   }
   
   h2 {
