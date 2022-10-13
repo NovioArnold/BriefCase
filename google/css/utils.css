@@ -216,19 +216,22 @@
 .grid162 {
     display: grid;
     grid-template-columns: 1fr 6fr 2fr;
+    width: 100fr;
+    height: 100fr;
     
 }
 
 .footer-flex {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+
+    width: 100vh;
 }
 
 .flex3 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    max-height: 25px;
+    max-height: 5vh;
 }
 
