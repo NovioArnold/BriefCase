@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    max-width: 1000px;
+    margin: auto;
+    background: #f2f3f4;
+    padding: 20px;
+    border: 10px solid #fff;
+    font-family: aller, sans-serif;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h1{
+    font-size: xx-large;
+    padding: 10px;
+}
+
+h2{
+    font-size: x-large;
+    padding:20px
+}
+
+.quote {
+    font-style: italic;
+    margin: auto;
+    padding: 20px;
+}
+
+#img-caption {
+    font-style: italic;
+    margin: auto;
+    padding: 20px;
+}
+
+li {
+    padding: 10px;
+}
+
+img {
+    display: block;
+}
+
+#image{
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
