@@ -1,9 +1,0 @@
-/*media*/
-
-@media (min-width: 768px){
- 
-    
-    .flex-container {
-        flex-direction: column;
-    }
-}   
