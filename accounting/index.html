@@ -10,30 +10,31 @@
 <body>
     <main>
         <section>
-            <h1 id="title">Survey Form</h1>
-            <p id="description">describe me</p>
+            <h1 id="title">Survey Form</h1><br>
+            <p id="description">describe me</p><br>
         </section>
         <section>
-            <form action="commit" id="survey-form">
-                <input type="text" name="name" id="name" placeholder="name" required><label id="name-label">name</label>
-                <input type="email" name="email" id="email" placeholder="email" required><label id="email-label">email</label>
-                <input type="number" name="number" id="number" min="0" max="150" placeholder="age"><label id="number-label">age</label>
+            <form action="commit" id="survey-form" class="form">
+                <input type="text" name="name" id="name" placeholder="name" required><label id="name-label">name</label><br>
+                <input type="email" name="email" id="email" placeholder="email" required><label id="email-label">email</label><br>
+                <input type="number" name="number" id="number" min="0" max="150" placeholder="age"><label id="number-label">age</label><br>
                 <select id="dropdown">
                     <option value="">select one</option>
                     <option value="student">student</option>
                     <option value="student">employee</option>
                     <option value="student">instructor</option>
-                </select>
+                </select><br>
                 <input type="radio" name="name" id="yes" value="yes">
                 <input type="radio" name="name" id="no" value="no">
                 <input type="radio" name="name" id="maybe" value="maybe">
-                <input type="checkbox" name="value" id="value" value="frondend">
-                <input type="checkbox" name="value" id="value" value="backend">
-                <input type="checkbox" name="value" id="value" value="database">
-                <input type="checkbox" name="value" id="value" value="data">
+                <input type="checkbox" name="value" id="value" value="frondend"><br>
+                <input type="checkbox" name="value" id="value" value="backend"><br>
+                <input type="checkbox" name="value" id="value" value="database"><br>
+                <input type="checkbox" name="value" id="value" value="data"><br>
                
-                <textarea name="motivate your awnsers" id="motivation" cols="30" rows="10"></textarea>
-                <input type="submit" value="submit" id="submit" >
+                <textarea name="motivate your awnsers" id="motivation" cols="30" rows="10"></textarea><br>
+
+                <input type="submit" value="submit" id="submit" ><br>
             </form>
         </section>
     </main>
