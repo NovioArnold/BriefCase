@@ -1,0 +1,8 @@
+:root   {
+    /*colorsceme*/
+    --highlight: #f0f0f0;
+    --bg-color-45grad: linear-gradient(45deg, #f1f1f1, #c1c1c1);
+
+
+    --normal: 2vh;
+}
