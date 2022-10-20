@@ -1,9 +1,18 @@
-.p-1{
-    padding: 1%;
+.p-1 {
+    padding: 5vh;
 }
 
-.border-3{
-    border: 3px solid #424242;
+.pr-10px {
+    padding-right: 10px;
+}
+
+.border-3{ 
+    border: 3px solid var(--border);
     border-radius: 10px;
     box-shadow: 4px black;
 }
+
+.inline-list  li{
+    display: inline-block;
+}
+

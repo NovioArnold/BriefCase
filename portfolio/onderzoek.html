@@ -8,19 +8,73 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/utils.css">
+    
 </head>
 <body>
     <main class="container" id="main-grid">
-        <nav class="navbar flex-container" id="navbar" >
-            <div id="logo" class="logo m-1 p-1">logo</div>
-            <div id="main-title" class="main-title m-1 p-1">title</div>
-            <div id="nav-menu" class="nav-menu m-1 p-1">nav menu</div>
+        <nav class="navbar flex-container border-3" id="navbar" >
+            <div id="logo" class="logo">logo</div>
+            <div id="nav-menu" class="nav-menu">
+                <ul id="nav-menu-list" class="nav-menu-list">
+                    <li id="nav-menu-item" class="nav-menu-item"><a href="index.html" class="home">Home</a></li>
+                    <li id="nav-menu-item" class="nav-menu-item"><a href="onderzoek.html" class="research">Onderzoek</a></li>
+                    <li id="nav-menu-item" class="nav-menu-item"><a href="documenten.html" class="documents">Documenten</a></li>
+                    <li id="nav-menu-item" class="nav-menu-item"><a href="projecten.html" class="projects">Projecten</a></li>
+                    <li id="nav-menu-item" class="nav-menu-item"><a href="contact.html" class="contact">About me</a></li>
+                </ul>
+            </div>
         </nav>
-        <section class="sidebar hidden-main" id="sidebar">sidebar</section>
-        <section class="main-content m-3 p-3" id="main-content">
-            <article id="research" class="article m-1 p-1">Onderzoek</article>
+        <section class="sidebar hidden-main border-3" id="sidebar">
+            <div class="sidebar">
+                <ul class="subjects">
+                    <li class="subject">
+                        <p class="name-subject"><h3 class="subject-title">APA richtlijnen</h3></p>
+                        <ul class="topics">
+                            
+                            <li class="topic">
+                                <p class="name-topic"><a href="https://www.scribbr.nl/apa-stijl/opmaak/" target=_blank>APA format info</a></p>
+                            </li>
+                            
+                        </ul>
+                    <li class="subject">
+                        <p class="name-subject"><h3 class="subject-title">Auteursrecht</h3></p>
+                        <ul class="topics">
+                            <li class="topic">
+                                <p class="name-topic"><a href="https://www.auteursrecht.nl/auteursrecht#:~:text=Het%20auteursrecht%20biedt%20iedereen%20die,beschermd%20tegen%20misbruik%20door%20anderen." target=_blank >auteursrecht</a></p>
+                            </li>
+                            <li class="topic">
+                                <p class="name-topic"><a href="https://www.iusmentis.com/auteursrecht/nl/vvv/werken/" target=_blank >werken en het auteursrecht</a></p>
+                            </li>
+                            
+                            <li class="topic">
+                                <p class="name-topic">name of topic</p>
+                            </li>
+                        </ul>    
+                    </li>
+                </ul>
+            </div>
         </section>
-        <footer class="footer" id="footer"></footer>
+        <section class="main-content border-3" id="main-content">
+            <h1 class="content-main-title">Onderzoeken</h1>
+            <p class="para-content">Hier vind je alle links die ik heb gebruikt bij de onderzoeken. <br>Deze staan onderverdeeld op onderwerp </p>
+        </section>
+        <footer class="footer border-3" id="footer">
+            <div class="copyright-footer" id="copyright-footer">
+                <ul class="copyright-list inline-list">
+                    <li class="copyright-list-item pr-10px "><p id="name ">Arnold Hilberink</p></li>
+                    <li class="copyright-list-item pr-10px"><p id="email "><i class="fa-solid fa-envelope"></i>&nbsp;<a href="mailto:arnold@hilberinkmedia.nl" class="mailme">mail me</a></p></li>
+                    <li class="copyright-list-item pr-10px"><p id="year-copyright ">2022 &copy;</p></li>
+                </ul>
+            </div>
+            <div class="powered-by">
+                <ul class="logo-list inline-list">
+                    <li class="logo-list-item"><img src="./content/img/logo/html.png" alt="html5 logo" class="logo"></li>
+                    <li class="logo-list-item"><img src="./content/img/logo/css.png" alt="css logo" class="logo"></li>
+                </ul>
+               
+            </div>
+        </footer>
     </main>
+    <script src="https://kit.fontawesome.com/85dc1affe6.js" crossorigin="anonymous"></script>
 </body>
 </html>
