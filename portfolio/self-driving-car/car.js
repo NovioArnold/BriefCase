@@ -8,6 +8,9 @@ class Car{
         this.controls =new Controls;
     
     }
+    update(){
+    
+    }
 
     draw(ctx){
         ctx.beginPath();
