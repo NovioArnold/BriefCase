@@ -23,18 +23,20 @@ wiel_waarde = {
     "D":2,
 }
 
-def heeft_gewonnen (colommen, lijnen, wielwaarde, gok):
+def heeft_gewonnen (spin, lijnen, wielwaarde, gok):
     winst=0
+    winnende_lijnen = []
     for lijn in range(lijnen):
-        print(colommen[0])[lijn]
-        symbool = colommen[0][lijn]
-        for colom in colommen:
+        print(spin)
+        symbool = spin[0][lijn]
+        for colom in symbool:
             symbool_check = colom[lijn]
             if symbool != symbool_check:
                 break
             else:
-                winst += wielwaarde * gok
-    return winst
+                winst += wielwaarde[symbool] * gok
+                winnende_lijnen.append(lijn + 1)
+    return winst, winnende_lijnen
 
 
 
@@ -66,6 +68,7 @@ def print_de_wielen(colommen):
                 print(colom[rij],f"-{i+1}", end=" ")
         
         print()
+    
 
 
 def speelgeld():
@@ -110,13 +113,18 @@ def gokbedrag(balans, lijnen):
 
 
 def spel_logica():
+
+    winnende_lijen = []
+
     balans = speelgeld()
     lijnen = speellijnen()
+
 
     gok, gok_totaal = gokbedrag(balans, lijnen)
     maak_slot = maak_wielen(RWS, CLS, wiel_symbolen)
     spin = print_de_wielen(maak_slot)
-    winst = heeft_gewonnen(spin, lijnen, wiel_waarde, gok)
+    
+    winst, winnende_lijen = heeft_gewonnen(maak_slot, lijnen, wiel_waarde, gok)
 
     print(spin)
     print(balans, lijnen, gok, gok_totaal, winst)
