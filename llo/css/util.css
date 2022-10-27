@@ -1,0 +1,205 @@
+/*padding*/
+.p1{
+    padding: 1em;
+}
+
+.p2{
+    padding: 1.5em;
+}
+
+.p3{
+    padding: 2em;
+}
+
+.p4{
+    padding: 3em;
+}
+
+.p5{
+    padding: 4em;
+}
+
+.px1{
+    padding: 1em 0;
+}
+
+
+.px2{
+    padding: 1.5 0;
+}
+
+.px3{
+    padding: 2 0;
+}
+
+.px4{
+    padding: 3 0;
+}
+
+.px5{
+    padding: 4 0;
+}
+
+.py1{
+    padding: 0 1em;
+}
+
+
+.py2{
+    padding: 0 1.5em;
+}
+
+.py3{
+    padding: 0 2em;
+}
+
+.py4{
+    padding: 0 3em;
+}
+
+.py5{
+    padding: 0 4em;
+}
+
+.p1{
+    padding-top: 1em;
+}
+
+.pt2{
+    padding-top: 1.5em;
+}
+
+.pt3{
+    padding-top: 2em;
+}
+
+.pt4{
+    padding-top: 3em;
+}
+
+.tp5{
+    padding-top: 4em;
+}
+
+pb1{
+    padding-bottom: 1em;
+}
+
+.pb2{
+    padding-bottom: 1.5em;
+}
+
+.pb3{
+    padding-bottom: 2em;
+}
+
+.pb4{
+    padding-bottom: 3em;
+}
+
+.pb5{
+    padding-bottom: 4em;
+}
+
+/*margin*/
+.m1{
+    padding: 1em;
+}
+
+.m2{
+    padding: 1.5em;
+}
+
+.m3{
+    padding: 2em;
+}
+
+.m4{
+    padding: 3em;
+}
+
+.m5{
+    padding: 4em;
+}
+
+.px1{
+    padding: 1em 0;
+}
+
+
+.px2{
+    padding: 1.5 0;
+}
+
+.px3{
+    padding: 2 0;
+}
+
+.px4{
+    padding: 3 0;
+}
+
+.px5{
+    padding: 4 0;
+}
+
+.py1{
+    padding: 0 1em;
+}
+
+
+.py2{
+    padding: 0 1.5em;
+}
+
+.py3{
+    padding: 0 2em;
+}
+
+.py4{
+    padding: 0 3em;
+}
+
+.py5{
+    padding: 0 4em;
+}
+
+.p1{
+    padding-top: 1em;
+}
+
+.pt2{
+    padding-top: 1.5em;
+}
+
+.pt3{
+    padding-top: 2em;
+}
+
+.pt4{
+    padding-top: 3em;
+}
+
+.tp5{
+    padding-top: 4em;
+}
+
+pb1{
+    padding-bottom: 1em;
+}
+
+.pb2{
+    padding-bottom: 1.5em;
+}
+
+.pb3{
+    padding-bottom: 2em;
+}
+
+.pb4{
+    padding-bottom: 3em;
+}
+
+.pb5{
+    padding-bottom: 4em;
+}

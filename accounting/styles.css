@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    max-width: 1000px;
+    margin: auto;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+form{
+    border: 5px solid black;
+}
+
+#name{
+    padding: 4px;
+    margin: 5px;
+}
