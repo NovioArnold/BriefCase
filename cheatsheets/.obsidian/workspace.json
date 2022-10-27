@@ -1,0 +1,160 @@
+{
+  "main": {
+    "id": "434656020815c85c",
+    "type": "split",
+    "children": [
+      {
+        "id": "ae460221f38659d7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2eda17079bfb8363",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Html.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ee4a6c9dc381353e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Font Awesome.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0d8653fe44cbf62f",
+    "type": "split",
+    "children": [
+      {
+        "id": "473b48124f1eb411",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9754e1ddff5fd477",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "cd00a0dc4d5f7915",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ff647a17d898f689",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b6107a931742066c",
+    "type": "split",
+    "children": [
+      {
+        "id": "630f059530e7161a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dd89f0e501593b79",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Font Awesome.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e7858d93c8171867",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Font Awesome.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "42a15d7bf80b9f21",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "09f73f897c06e128",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Font Awesome.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "ee4a6c9dc381353e",
+  "lastOpenFiles": [
+    "Html.md",
+    "Font Awesome.md"
+  ]
+}
