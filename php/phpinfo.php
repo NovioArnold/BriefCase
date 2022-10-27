@@ -1,2 +1,0 @@
-
-phpinfo(INFO_LICENSE);
