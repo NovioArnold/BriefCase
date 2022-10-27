@@ -28,10 +28,10 @@
                 echo 'Goedemorgen ' .$naam;
             }
             elseif($land=='DE'){
-                'Guten Morgen ' .$naam;
+                echo 'Guten Morgen ' .$naam;
             }
             elseif($land=="EN"){
-                'Goodmorning ' .$naam;
+                echo 'Goodmorning ' .$naam;
             }
         }
     ?>
