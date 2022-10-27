@@ -1,7 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+
 
 body {
     height: 100%;
@@ -48,28 +45,7 @@ a:hover{
     max-width: 100vh;
 }
 
-.flex-container{
-    display: flex;
-    flex-direction: row;
-    height: 8%;
-    justify-content: flex-start;
-    border:3px sollid #000;
-}
 
-
-.grid-container{
-    display: grid;
-    grid-template-areas: 
-    'navigation-bar navigation-bar navigation-bar'
-    'main-window main-window main-window'
-    'footer1 footer1 footer1'
-    'footer footer footer'
-    ;
-    grid-column: 1fr 10fr 1fr;
-    height: 100%;
-    margin: 0;
-
-}
 
 .navigation-bar {
     grid-area: navigation-bar;
@@ -83,7 +59,7 @@ a:hover{
     grid-area: main-window;
     height:100vh;
     width: 100vh;
-    margin: 0 10% ;
+    margin: 0 10% 0 10% ;
     justify-self: center;
     align-self: center;
    

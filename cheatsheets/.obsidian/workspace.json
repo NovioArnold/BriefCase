@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Font Awesome.md",
+                "file": "Html.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Font Awesome.md",
+                "file": "Html.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Font Awesome.md"
+                "file": "Html.md"
               }
             }
           }
@@ -152,9 +151,9 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "ee4a6c9dc381353e",
+  "active": "2eda17079bfb8363",
   "lastOpenFiles": [
-    "Html.md",
-    "Font Awesome.md"
+    "Font Awesome.md",
+    "Html.md"
   ]
 }
