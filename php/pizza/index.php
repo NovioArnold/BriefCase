@@ -47,8 +47,7 @@
         <input type="text" name="plaats" placeholder="Uw woonplaats" required>
         <p class="datum">Besteldatum:</p>
         <input type="date" name="besteldatum" placeholder="Besteldatum" required>
-        <p class="tijd">Tijd:</p>
-        <input type="time" name="tijd" placeholder="time" required >
+        
         <p class="bez-afh">Bezorgen of afhalen?</p>
         <select name="afhaalBezorgen" value="afhaalBezorgen" required >
             <option value="">[kies optie.....]</option>
@@ -70,21 +69,48 @@
     </div>
     <?php
         if(isset($_POST["submit"])){
-            $datum= $_POST["besteldatum"];
+            $datum= $order["Datum"];
             #kosten en kortingen
             $bezorgkosten = "5.00";
             $maandagPizzaDag = "7.50";
             $pizzaWeekend = "20.00";
             $pizzaWeekendKorting = ".15";
+            $bezorgFlag = $order["Bezorgen"];
             #My little helpers
-            function is_maandag($datum) {
-                return date('D', strtotime($datum)) === 'Ma';
+            #functie die berekend of er een korting van toepassing is.
+           function discount($datum, $maandagPizzaDag, $pizzaWeekend, $pizzaWeekendKorting, $totalPrice){
+            $day = date('D', $datum);
+            if ($day === 'Mon'){
+                $price = $maandagPizzaDag;
+                return $price;
             }
-            print_r(is_maandag($datum));
+            elseif ($day === 'Sat' or $day === 'Sun'){
+                if ($totalPrice > $pizzaWeekend){
+                    $discount = $totalPrice / $pizzaWeekendKorting;
+                    $price = $totalPrice - $discount;
+                    return $price;
+                }
+                else{
+                    return $totalPrice;
+                }
+            }
+           }
+           #functie die bekijkt of bezorgkosten van toepassing zijn
+           function deliveryCost($totalPrice, $bezorgkosten, $bezorgFlag ){
+            if ($bezorgFlag === 'bezorgen'){
+                $price = $totalPrice + $bezorgkosten;
+                return $price; 
+            }
+           }
+           #functie die de totaal prijs berekend
+           function totalCalculator($pizzaOrderLijst, $pizzaPrijsLijst){
+            for each pizza in $pizzaOrderLijst;
+           }
+            
 
 
             #prijzenlijst voor de pizza's
-            $pizzaList = array(
+            $pizzaPrijsLijst = array(
                 "soort" => "prijs",
                 "Margarita" => "12.50",
                 "Funghi" => "12.50",
@@ -92,6 +118,16 @@
                 "Hawai" => "11.50",
                 "Quattro Formaggi" => "14.50"
             );
+            #bestelling van klant
+            $pizzaOrderLijst = array(
+                "soort" => "prijs",
+                "Margarita" => "0",
+                "Funghi" => "0",
+                "Marina" => "0",
+                "Hawai" => "0",
+                "Quattro Formaggi" => "0"
+            );
+
             # maakt assosiated array voor de order aan
             $order = array(
                 "Name" => $_POST["naam"],
@@ -99,7 +135,7 @@
                 "Postcode" => $_POST["postcode"],
                 "City" => $_POST["plaats"],
                 "Bezorgen" => "",
-                "Datum" => $_POST["besteldatum"],
+                "Datum" => date_create(),
                 "Tijd" => $_POST["tijd"],
                 "Option" => "",
                 "Prijs" => ""
@@ -112,19 +148,19 @@
 
             #zoek op de prijs in $pizzaPrijs en voeg deze to aan $order
             if($pizza == "margarita" ){
-                $order["Prijs"] = $pizzaList["Margarita"];
+                $order["Prijs"] = $pizzaPrijsLijst["Margarita"];
             }
             elseif($pizza == "funghi"){
-                $order["Prijs"] = $pizzaList["Funghi"];
+                $order["Prijs"] = $pizzaPrijsLijst["Funghi"];
             }
             elseif($pizza == "marina"){
-                $order["Prijs"] = $pizzaList["Marina"];
+                $order["Prijs"] = $pizzaPrijsLijst["Marina"];
             }
             elseif($pizza == "hawai"){
-                $order["Prijs"] = $pizzaList["Hawai"];
+                $order["Prijs"] = $pizzaPrijsLijst["Hawai"];
             }
             elseif($pizza == "quattro"){
-                $order["Prijs"] = $pizzaList["Quattro Formaggi"];
+                $order["Prijs"] = $pizzaPrijsLijst["Quattro Formaggi"];
             }
             
             
