@@ -32,6 +32,16 @@
             }
           },
           {
+            "id": "357b6bd97b7be8e3",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.0.3"
+              }
+            }
+          },
+          {
             "id": "ee4a6c9dc381353e",
             "type": "leaf",
             "state": {
@@ -44,7 +54,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -161,10 +171,7 @@
     "width": 300,
     "collapsed": true
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "10e169100d0ec810",
+  "active": "357b6bd97b7be8e3",
   "lastOpenFiles": [
     "Html.md",
     "Font Awesome.md"
