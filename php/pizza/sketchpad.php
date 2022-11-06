@@ -64,6 +64,7 @@ $klantBestand=[
     ]
 ];
 
+
 $test = array_values($bestellijst[0]);
 print_r($test);
 ?>

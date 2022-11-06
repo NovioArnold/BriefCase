@@ -1,4 +1,5 @@
 <?php
+#Items that can be ordered
 $bestellijst = [
     [
         'Soort pizza' => 'Margarita', 'Prijs per stuk' => '12.50'
@@ -28,19 +29,24 @@ $orderlijst = [
         
         'Ordernummer' => ' ', 'Naam' => ' ', 'Adres' => ' ', 'Postcode' => ' ', 'Woonplaats' => ' ', 'Bezorgen' => ' ', 'Datum' => ' '
     ],
-    'bestelde pizzas' => [],
+    'Bestelde pizzas' => [],
 
     ];
+
+#variables
 $pizza_day = 'Mon';
 $pizza_day_price = 7.50;
 $minimal_eligable_for_discount = 20;
 $discount = .15;
 $deliver_cost = 5.00;
+$totaalBedragPizzas = 0;
+$total_pizza_price = 0;
+$total_price = 0;
 
 
-
+#event button press 'berekenen
 if(isset($_POST["bereken"])){
-    #add data to order array [0]
+    #add data to $orderlijst array key[0] 
     $orderlijst[0]['Ordernummer'] = $_SERVER['REQUEST_TIME'];
     $orderlijst[0]['Naam'] = htmlspecialchars($_POST["name"]);
     $orderlijst[0]['Adres'] = htmlspecialchars($_POST["address"]);
@@ -48,14 +54,14 @@ if(isset($_POST["bereken"])){
     $orderlijst[0]['Woonplaats'] = htmlspecialchars($_POST["city"]);
     $orderlijst[0]['Bezorgen'] = htmlspecialchars($_POST["deliver"]); 
     $orderlijst[0]['Datum'] = date('d-m-y');
-    #print_r($orderlijst);
     
+ #-------------------------------------------------------   
     #my little helpers
     #sum of an array
     function sum_of_array($array){
         return array_sum($array);
        }
-    
+    #gets all values out of an array
     function get_value($array){
         return array_values($array);
     }
@@ -67,7 +73,7 @@ if(isset($_POST["bereken"])){
         $index = 0;
         foreach ($array as $key => $value){
             
-        #var_dump( $value['Prijs per stuk'] * $pizza_in_basket[$index]);
+       
             array_push($total_price, $value['Prijs per stuk'] * $pizza_in_basket[$index]);
             $index ++;
         }
@@ -75,30 +81,55 @@ if(isset($_POST["bereken"])){
     }
     #genrate ass array for each kind of pizza
     function append_kind_to_order($total_price_per_pizza, $pizza_in_basket, $bestellijst){
+        $array = [];
         foreach($pizza_in_basket as $key => $value){
-            #var_dump($value);
-            $array = [];
-            if ($value > 0){
-                #print_r($value);
-               #print_r($key);
-
-                $temp_arr = ['Soort pizza' => $bestellijst[$key]['Soort pizza'], 'Aantal' => $pizza_in_basket[$key], $total_price_per_pizza[$key] ];
-                print_r($temp_arr);
-                echo "<p><br></p>";
-                
-                array_push($array, $temp_arr);
-                print_r($array);
-                
-               #print_r($temp_arr);
-                #echo "/n";
-                
-                
-            }
             
+            #checks if ordered ammount per pizza is higher then 0
+            if ($value > 0 ){
+                #gerenerate temp array
+                $temp_arr = ['Soort pizza' => $bestellijst[$key]['Soort pizza'], 'Aantal' => $pizza_in_basket[$key],'Totaal' => $total_price_per_pizza[$key] ];
+                #push array onto Temp multi array $array
+                array_push($array, $temp_arr);                
+            }            
+        }        
+        return($array);
+    }
+    #builds a table out of an array
+    function build_table($array){
+        // start table
+        $html = '<table>';
+        // header row
+        $html .= '<tr>';
+        foreach($array[0] as $key=>$value){
+                $html .= '<th>' . htmlspecialchars($key) . '</th>';
+            }
+        $html .= '</tr>';
+    
+        // data rows
+        foreach( $array as $key=>$value){
+            $html .= '<tr>';
+            foreach($value as $key2=>$value2){
+                $html .= '<td>' . htmlspecialchars($value2) . '</td>';
+            }
+            $html .= '</tr>';
+
         }
         
-        
-
+    
+        // finish table and return it
+    
+       
+        return $html;
+    }
+    #Builds totals table
+    function build_totals_table($deliver_cost, $total_pizza_price){
+        $html = '';
+        $html .= '</table>';
+        $html .= '<table> <tr><th>Type</th><th>bedrag</th></tr>';
+        $html .= '<tr><td>Bezorgkosten: € </td><td>'. $deliver_cost .'</td></tr>';
+        $html .= '<tr><td>Totaal bedrag: €</td><td>'. round($total_pizza_price, 2) .'</td></tr>';
+        $html .= '</table>';
+        return $html;
     }
     
 
@@ -123,13 +154,21 @@ if(isset($_POST["bereken"])){
     #Total price of all pizza's
     $total_pizza_price = sum_of_array( $total_price_per_pizza);
     #append pizza to $orderlijst if $value > 0
+    $orderlijst['Bestelde pizzas'] = append_kind_to_order($total_price_per_pizza, $pizza_in_basket, $bestellijst);
     
-    append_kind_to_order($total_price_per_pizza, $pizza_in_basket, $bestellijst);
-    #var_dump($orderlijst);
+
+   
+    
     #Delivery cost applied
-    if ($orderlijst[0]['Bezorgen']==='ja');
+    if ($orderlijst[0]['Bezorgen']==='ja'){
+        echo $deliver_cost;
         $total_price = $total_pizza_price + $deliver_cost;
         #print_r($total_price);
+        
+    }
+    echo build_table($orderlijst['Bestelde pizzas']);
+    echo build_totals_table($deliver_cost, $total_pizza_price);
+   
    
     #Day of the order
     #print_r($datum);
@@ -264,22 +303,7 @@ if(isset($_POST["bereken"])){
         <section>
         <?php echo "pizza: $total_pizza_price + bezorgosten: $deliver_cost = Te Betalen $total_price" ?>
         <?php print_r($orderlijst)?>
-        <?php if (count($orderlijst) > 0): ?>
-<table>
-  <thead>
-    <tr>
-      <th><?php echo implode('</th><th>', array_keys(current($orderlijst))); ?></th>
-    </tr>
-  </thead>
-  <tbody>
-<?php foreach ($orderlijst as $row): array_map('htmlentities', $row); ?>
-    <tr>
-      <td><?php echo implode('</td><td>', $row); ?></td>
-    </tr>
-<?php endforeach; ?>
-  </tbody>
-</table>
-<?php endif; ?>
+
         
         </section>
     </div>
