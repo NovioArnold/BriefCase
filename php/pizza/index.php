@@ -31,7 +31,7 @@ $orderlijst = [
     ];
 
 #variables
-$pizza_day = 'Mon';
+$pizza_day = 'Thu';
 $pizza_day_price = 7.50;
 $minimal_eligable_for_discount = 20;
 $discount = .15;
@@ -158,7 +158,7 @@ if(isset($_POST["bereken"])){
     
     #Delivery cost applied
     if ($orderlijst[0]['Bezorgen']==='ja'){
-        echo $deliver_cost;
+        #echo $deliver_cost;
         $total_price = $total_pizza_price + $deliver_cost;
         #print_r($total_price);
         
@@ -170,9 +170,14 @@ if(isset($_POST["bereken"])){
     #Day of the order
     #print_r($datum);
     $day = date('D');
-    if ($day === $pizza_day){
+    
+    if ($day == $pizza_day){
+        #deze werkt niet!
+        echo $day;
+        echo $pizza_day;
         #berekend het totaal bedrag voor de promodag(voor bezorgkosten)
-        $price = sum_of_array($pizza_in_basket) * $pizza_day_price;
+       $price = calc_total_pizza_price($bestellijst, $pizza_day_price);
+        #$price = sum_of_array($pizza_in_basket) * $pizza_day_price;
         return $price;
     }
     elseif ($day === 'Sat' or $day === 'Sun'){
@@ -192,16 +197,6 @@ if(isset($_POST["bereken"])){
 
 
 
-    
-
-    #check if the orderdate is on $pizza_day -> all pizzas price = $pizza_day_price
-        #$total_pizza_price = $sum_of_all_pizzas * $pizza_day_price
-    #check if the orderdate is $discountday(array of days ie ['sat', 'sun']) if so 
-        # caluclate discount if $total_pizza_price > $minimal_eligable_for_discount
-            # total_pizza_price = total_pizza_price - (total_pizza_price * $discount)
-    #check if de deliver flag is set $deliver_cost
-    #calulate btw of order
-    #total priz of oreder
 }
 
 ?>
@@ -298,8 +293,8 @@ if(isset($_POST["bereken"])){
             </form>
         </section>
         <section>
-        <?php echo "pizza: $total_pizza_price + bezorgosten: $deliver_cost = Te Betalen $total_price" ?>
-        <?php print_r($orderlijst)?>
+        <?php #echo "pizza: $total_pizza_price + bezorgosten: $deliver_cost = Te Betalen $total_price" ?>
+        <?php #print_r($orderlijst)?>
 
         
         </section>
