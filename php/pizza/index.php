@@ -31,11 +31,19 @@ $orderlijst = [
     ];
 
 #variables
+#gets day of the week
+$day = date('D');
+#pizza day variables
 $pizza_day = 'Thu';
 $pizza_day_price = 7.50;
+#discount days variables
+$d_day1 = 'Sat';
+$d_day2 = 'Sun';
 $minimal_eligable_for_discount = 20;
 $discount = .15;
+#dilivery cost
 $deliver_cost = 5.00;
+#__init__ of variables
 $totaalBedragPizzas = 0;
 $total_pizza_price = 0;
 $total_price = 0;
@@ -72,6 +80,19 @@ if(isset($_POST["bereken"])){
             
        
             array_push($total_price, $value['Prijs per stuk'] * $pizza_in_basket[$index]);
+            $index ++;
+        }
+        return $total_price;
+    }
+    #Total price calculator on pizza day
+    function calc_total_pizza_day_price($pizza_day_price, $pizza_in_basket){
+        
+        $total_price = [];
+        $index = 0;
+        foreach ($pizza_in_basket as $value){
+            
+       
+            array_push($total_price, $pizza_day_price * $pizza_in_basket[$index]);
             $index ++;
         }
         return $total_price;
@@ -128,7 +149,50 @@ if(isset($_POST["bereken"])){
         $html .= '</table>';
         return $html;
     }
-    
+    #Is it pizza day
+    function is_it_pizza_day(
+        $bestellijst,
+        $pizza_day,
+        $pizza_day_price,
+        $day    
+        ){
+        
+        if ($day == $pizza_day){
+        $lenarray = count($bestellijst);
+           for($i = 0; $i <= $lenarray; $i++ ){
+            $bestellijst['i']['prijs per stuk'] = $pizza_day_price;
+            }
+
+        print_r($bestellijst);    
+        }
+        
+            
+
+    # is it a discount day
+    function is_it_a_discount_day(
+        $d_day1,
+        $d_day2,
+        $total_pizza_price,
+        $minimal_eligable_for_discount,
+        $discount,
+        $day,
+        $totaalBedragPizzas
+        
+        ){
+
+        if ($day === $d_day1 or $day === $d_day2){
+            #berekenen van het totaal bedrag van de weekend korting.(voor bezorgkosten)
+            if ($total_pizza_price > $minimal_eligable_for_discount){
+                    $discounted = $total_pizza_price / $discount;
+                    $price = $totaalBedragPizzas - $discounted;
+                    return $price;
+                }
+            else{
+                    return $total_pizza_price;
+            }
+        }
+    }
+        }    
 
 
     #getts number of puzza's ordered
@@ -146,6 +210,8 @@ if(isset($_POST["bereken"])){
     
     #Total of pizza ordered
     $total_of_pizza = sum_of_array($pizza_in_basket);
+    #test if its pizza day
+    is_it_pizza_day($bestellijst,$pizza_day,$pizza_day_price, $day);
     #Total price per pizza
     $total_price_per_pizza = calc_total_pizza_price($bestellijst, $pizza_in_basket);
     #Total price of all pizza's
@@ -171,26 +237,7 @@ if(isset($_POST["bereken"])){
     #print_r($datum);
     $day = date('D');
     
-    if ($day == $pizza_day){
-        #deze werkt niet!
-        echo $day;
-        echo $pizza_day;
-        #berekend het totaal bedrag voor de promodag(voor bezorgkosten)
-       $price = calc_total_pizza_price($bestellijst, $pizza_day_price);
-        #$price = sum_of_array($pizza_in_basket) * $pizza_day_price;
-        return $price;
-    }
-    elseif ($day === 'Sat' or $day === 'Sun'){
-        #berekenen van het totaal bedrag van de weekend korting.(voor bezorgkosten)
-        if ($total_pizza_price > $minimal_eligable_for_discount){
-                $discounted = $total_pizza_price / $discount;
-                $price = $totaalBedragPizzas - $discounted;
-                return $price;
-            }
-        else{
-                return $total_pizza_price;
-        }
-    }
+   
     
     
    
