@@ -34,7 +34,7 @@ $orderlijst = [
 #gets day of the week
 $day = date('D');
 #pizza day variables
-$pizza_day = 'Thu';
+$pizza_day = '';
 $pizza_day_price = 7.50;
 #discount days variables
 $d_day1 = 'Sat';
@@ -214,14 +214,12 @@ if(isset($_POST["bereken"])){
     is_it_pizza_day($bestellijst,$pizza_day,$pizza_day_price, $day);
     #Total price per pizza
     $total_price_per_pizza = calc_total_pizza_price($bestellijst, $pizza_in_basket);
+    #test if pizza day
+    $total_price = is_it_a_discount_day($d_day1,$d_day2, $total_pizza_price, $minimal_eligable_for_discount, $discount, $day, $totaalBedragPizzas);
     #Total price of all pizza's
     $total_pizza_price = sum_of_array( $total_price_per_pizza);
     #append pizza to $orderlijst if $value > 0
-    $orderlijst['Bestelde pizzas'] = append_kind_to_order($total_price_per_pizza, $pizza_in_basket, $bestellijst);
-    
-
-   
-    
+    $orderlijst['Bestelde pizzas'] = append_kind_to_order($total_price_per_pizza, $pizza_in_basket, $bestellijst);   
     #Delivery cost applied
     if ($orderlijst[0]['Bezorgen']==='ja'){
         #echo $deliver_cost;
@@ -233,9 +231,6 @@ if(isset($_POST["bereken"])){
     echo build_totals_table($deliver_cost, $total_pizza_price);
    
    
-    #Day of the order
-    #print_r($datum);
-    $day = date('D');
     
    
     
