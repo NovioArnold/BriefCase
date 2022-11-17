@@ -17,7 +17,8 @@ function append_kind_to_order($total_price_per_pizza, $pizza_in_basket, $bestell
 }
 
  #Total price calculator
- #if(isset($_POST['bereken'])){
+ 
+    
  function calc_total_pizza_price($array, $pizza_in_basket){
 
     $total_price = [];

@@ -72,9 +72,7 @@
 <section class="reciept">
     <?php 
     if(isset($_POST['bereken'])){
-    if ($day === $pday){echo '<h1>ITS PIZZA Dag alle pizzas '.$pday_price.' per stuk</h1>';}
-    if ($day === $d_day1 or $day === $d_day2){echo '<h1>Het is weekend, bij een besteding van minimaal ' .$minimal_eligable_for_discount .' euro krijg je ' .($discount * 100).'% korting</h1>';}
-    echo "
+        echo "
     <ul >
         <li >Ordernummer: ".$orderlijst[0]['Ordernummer']."</li>
         <li >Besteldatum: ".$orderlijst[0]['Datum']."</li>

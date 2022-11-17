@@ -4,7 +4,7 @@
 #gets day of the week
 $day = date('D');
 #pizza day variables
-$pday = 'Thu';
+$pday = 'Vri';
 $pday_price = 7.50;
 #discount days variables
 $d_day1 = 'Sat';

@@ -1,7 +1,18 @@
 <?php
+ #Chcck if day is pizza day
+if ($day === $pday){
+    for ($x = 0; $x < count($bestellijst); $x++){
+    
+        
+        $bestellijst[$x]['Prijs per stuk'] = $pday_price;
+    }
+
+
+}
+
      #event button press 'berekenen
 if(isset($_POST["bereken"])){
-    
+   
     #add data to $orderlijst array key[0] 
     $orderlijst[0]['Ordernummer'] = $_SERVER['REQUEST_TIME'];
     $orderlijst[0]['Naam'] = htmlspecialchars($_POST["name"]);
@@ -29,7 +40,7 @@ if(isset($_POST["bereken"])){
 
     
     }
-}
+
 
 
     
@@ -53,7 +64,7 @@ if(isset($_POST["bereken"])){
         
     }
     
-   
+} 
 
   
     
