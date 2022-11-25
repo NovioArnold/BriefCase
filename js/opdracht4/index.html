@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, paper, scissors</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/array.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/variables.js"></script>
+    <script src="js/compare.js"></script>
+    <script src="js/compareToArray.js"></script>
+    <script src="js/notNull.js"></script>
+    
+</head>
+<body><div id="game" class="game"></div>
+    <select name="option" id="player-choice">
+        <option value="default">make choice</option>
+        <option value="rock">rock</option>
+        <option value="paper">paper</option>
+        <option value="scissors">scissors</option>
+
+    </select>
+    <input type="button" value="submit" name="submit" onClick=main()>
+    <script>
+    function main(){
+        //main game logic
+        //get choices
+        //check if choice is made
+
+        var rounds = numberOfRounds
+        alert (rounds)
+        while (rounds > 0){
+        var value = notNull(document.getElementById('player-choice').value);
+        alert (value);
+        var computerChoice = getRandomInt(gameOptions.length -1);
+        //alert computers choice
+        alert ('the computer choose: '+ gameOptions[computerChoice]);
+        
+        var compval = compareChoice(compareToArray(value, gameOptions,), computerChoice);
+        if (compval === 'player'){
+            playerWins = playerWins + 1;
+        }
+        if (compval === 'computer'){
+            computerWins = computerWins + 1;
+        }
+        alert('the score is: player'+playerWins+' computer'+computerWins);
+        alert (rounds-1 +' to go!')
+        rounds = rounds - 1
+    }
+    
+    }
+    </script>
+  
+</body>
+</html>
