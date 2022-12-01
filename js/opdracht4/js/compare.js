@@ -7,28 +7,32 @@ function compareChoice(playersChoice, computerChoice, playerWins, computerWins){
         return 'player';  
     }
     else if (playersChoice  == 1 && computerChoice == 0){
-        document.getElementById('winner-card').innerHTML= '<p>you win</>';
+        document.getElementById('winner-card').innerHTML= '<p>you win</p>';
         return 'player';
     }
     else if (playersChoice  == 2 && computerChoice == 1){
-        document.getElementById('winner-card').innerHTML= '<p>you win</>';
+        document.getElementById('winner-card').innerHTML= '<p>you win</p>';
         return 'player';
     }
     //draw
     else if (playersChoice  == 0 && computerChoice == 0){
-        //alert ('its a draw');
+        document.getElementById('winner-card').innerHTML= '<p>its a draw</p>';
+       
         return ;  
     }
     else if (playersChoice  == 1 && computerChoice == 1){
-        //alert ('its a draw');
+        document.getElementById('winner-card').innerHTML= '<p>its a draw</p>';
+        
         return;  
     }
     else if (playersChoice  == 2 && computerChoice == 2){
-        alert ('its a draw');
+        document.getElementById('winner-card').innerHTML= '<p>its a draw</p>';
+       
         return;  
     }else{
     //loose            
         //alert ('you loose');
+        document.getElementById('winner-card').innerHTML= '<p>you loose</p>';
         return 'computer'
     }
 

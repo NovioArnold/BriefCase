@@ -25,7 +25,7 @@
                 userSelectedCard1 = cardId;
             }else{
                 userClick2 = cardNumber;
-                userSelectedCard2 = cardId
+                userSelectedCard2 = cardId;
             }
             //reset routine
             if(userClick2!=0){
@@ -39,12 +39,13 @@
                     document.getElementById(userSelectedCard2).value=  "";
                     document.getElementById(userSelectedCard1).style = "background: url('./assets/back_of_card.jpg')";
                     document.getElementById(userSelectedCard2).style = "background: url('./assets/back_of_card.jpg')";
+                }
                 userClick1 = 0;
                 userClick2 = 0;
 
             }
         }
-    }
+    
     function getRandomInt(max) {
         return Math.floor(Math.random() * max);
     }
@@ -73,10 +74,10 @@
     <div class="memory-container">
         <h1>Memory</h1>
         
-        <input type="button" value="" id="kaart1" class="memory-card" onclick="checkClickedCard(1, 'kaart1')" background="url('./assets/back_of_card.jpg'" />
-        <input type="button" value="" id="kaart2" class="memory-card" onclick="checkClickedCard(2, 'kaart2')" background="url('./assets/back_of_card.jpg'" />
-        <input type="button" value="" id="kaart3" class="memory-card" onclick="checkClickedCard(1, 'kaart3')" background="url('./assets/back_of_card.jpg'"/>
-        <input type="button" value="" id="kaart4" class="memory-card" onclick="checkClickedCard(2, 'kaart4')" background="url('./assets/back_of_card.jpg'"/>
+        <input type="button" value="" id="kaart1" class="memory-card" onclick="checkClickedCard(1, 'kaart1')";  />
+        <input type="button" value="" id="kaart2" class="memory-card" onclick="checkClickedCard(2, 'kaart2')";  />
+        <input type="button" value="" id="kaart3" class="memory-card" onclick="checkClickedCard(1, 'kaart3')"; />
+        <input type="button" value="" id="kaart4" class="memory-card" onclick="checkClickedCard(2, 'kaart4')"; />
     </div>
     <div class="memory-container">
         <div id="memory-cards" class="memory-card">
