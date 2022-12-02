@@ -6,69 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <title>Memory</title>
-    <script>
-        var userClick1 = 0;
-        var userClick2 = 0;
-        var userSelectedCard1 = "";
-        var userSelectedCard2 = "";
-        var numberOfCards = 4;
-        function checkClickedCard(cardNumber, cardId){
-            //Disable sellected card, you can only click once on the selected card.
-            
-            document.getElementById(cardId).disabled = true;
-            //add value to card
-            document.getElementById(cardId).value = cardNumber;
-            document.getElementById(cardId).style = "background: url('./assets/"+cardNumber+".png')";
-            //Store click1 and click2
-            if (userClick1==0) {
-                userClick1 = cardNumber;
-                userSelectedCard1 = cardId;
-            }else{
-                userClick2 = cardNumber;
-                userSelectedCard2 = cardId;
-            }
-            //reset routine
-            if(userClick2!=0){
-                if(userClick1==userClick2){
-                    document.getElementById("msg").innerHTML = "goed gedaan!";
-                }else{
-                    document.getElementById("msg").innerHTML = "Fout";
-                    document.getElementById(userSelectedCard1).disabled = false;
-                    document.getElementById(userSelectedCard2).disabled = false;
-                    document.getElementById(userSelectedCard1).value = "";
-                    document.getElementById(userSelectedCard2).value=  "";
-                    document.getElementById(userSelectedCard1).style = "background: url('./assets/back_of_card.jpg')";
-                    document.getElementById(userSelectedCard2).style = "background: url('./assets/back_of_card.jpg')";
-                }
-                userClick1 = 0;
-                userClick2 = 0;
-
-            }
-        }
-    
-    function getRandomInt(max) {
-        return Math.floor(Math.random() * max);
-    }
-    function shuffleCards(){
-        document.getElementById("memory_cards").innerHTML = '';
-        cardArr = new Array();
-         for(i=0; i<numberOfCards/2; i++){
-                cardsArr.push(i);
-                cardsArr.push(i);
-                console.log(cardsArr)
-         }
-        while(cardsArr.length>0){
-            var randomNumber =getRandomInt(cardsArr.length);
-            document.getElementById('memory_cards').innerHTML +=
-            '<input type="button" value="' + 
-            cardArr[randomNumber] +
-            '" id="kaart' + cardArr.length +
-            '" class="memory-card" onclick="checkClickedCard(' +
-            cardArr[randomNumber] + ', \'kaart' + cardArr.splice(randomNumber,1);
-        }
-    }
-    
-    </script>   
+    <script src="js/var.js"></script>
+    <script src="js/checkClickedCard.js"></script>
+    <script src="js/getRandomInt.js"></script>
+    <script src="js/shuffleCards.js"></script>
 </head>
 <body>
     <div class="memory-container">
@@ -81,7 +22,10 @@
     </div>
     <div class="memory-container">
         <div id="memory-cards" class="memory-card">
-            <script>shuffleCards();</script>
+            
+            <script>shuffleCards();
+            //TODO : implement shuffle the cards correctly
+            </script>
         </div>
     </div>
 
