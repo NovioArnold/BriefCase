@@ -4,7 +4,8 @@ function checkClickedCard(cardNumber, cardId){
     document.getElementById(cardId).disabled = true;
     //add value to card
     document.getElementById(cardId).value = cardNumber;
-    document.getElementById(cardId).style = "background: url('./assets/"+cardNumber+".png')";
+    //load the correct image from the asset folder cardArray.js
+    document.getElementById(cardId).style = `background: url(${cardArray[cardNumber - 1]})`;
     //Store click1 and click2
     if (userClick1==0) {
         userClick1 = cardNumber;

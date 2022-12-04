@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/playField.css">
     <title>Memory</title>
     <script src="js/var.js"></script>
     <script src="js/checkClickedCard.js"></script>
+    <script src="js/randomThaCards.js"></script>
     <script src="js/getRandomInt.js"></script>
     <script src="js/shuffleCards.js"></script>
+    <script src="js/cardArray.js"></script>
+
 </head>
 <body>
     <div class="memory-container">
@@ -20,18 +24,12 @@
         <input type="button" value="" id="kaart3" class="memory-card" onclick="checkClickedCard(1, 'kaart3')"; />
         <input type="button" value="" id="kaart4" class="memory-card" onclick="checkClickedCard(2, 'kaart4')"; />
     </div>
-    <div class="memory-container">
-        <div id="memory-cards" class="memory-card">
-            
-            <script>shuffleCards();
-            //TODO : implement shuffle the cards correctly
-            </script>
-        </div>
-    </div>
+    <div class="playfield" id="playfield"></div>
+   
 
     <div id="msg" class="msg"></div>
 
-
+<script>randomThaCards();renderPlayingField();alert('is this working?')</script>
 
 
 </body>
