@@ -14,13 +14,23 @@ function randomThaCards(){
     
     //init let sortArrayLength
     let cardCounter = sortArray.length;
+    
     console.log(sortArray);
     //while loop that adds cards to the play array and pops them from sortarray
-    while (sortArray.length >= 0){
-        var item = sortArray[Math.floor(Math.random()*sortArray.length)];
-        alert(item);
-        playArray.push(item);
-        sortArray.splice(item);}
+    sortArray.forEach( (card) => {
+        //let item = sortArray[Math.floor(Math.random()*sortArray.length)];
+        let item = Math.floor(Math.random() * sortArray.length)
+        console.log(item);
+        //console.log(sortArray[item]);
+        playArray.push(sortArray[item]);
+
+        //console.log(playArray);
+        sortArray.splice(item, 1);
+        alert(sortArray.length);
+        console.log(sortArray);
+        
+    })
+    alert(playArray);
     
     
     return playArray;
