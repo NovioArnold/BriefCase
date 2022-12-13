@@ -3,4 +3,5 @@
     grid-template-columns: repeat(4,1fr);
     gap : 5px;
     justify-content: space-evenly;
+    text-align: center;
 }

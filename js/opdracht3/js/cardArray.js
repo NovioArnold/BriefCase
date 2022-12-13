@@ -1,4 +1,6 @@
-var cardArray = [
+// array of all the cards faces
+
+const cardArray = [
     './assets/1.png',
     './assets/2.png',
     './assets/3.png',

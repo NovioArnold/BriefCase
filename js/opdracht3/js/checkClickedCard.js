@@ -1,13 +1,16 @@
 function checkClickedCard(cardNumber, cardId){
-    //Disable sellected card, you can only click once on the selected card.
+    
+    //Disable selected card, you can only click once on the selected card.
     
     document.getElementById(cardId).disabled = true;
     //add value to card
     document.getElementById(cardId).value = cardNumber;
     //load the correct image from the asset folder cardArray.js
-    document.getElementById(cardId).style = `background: url(${cardArray[cardNumber - 1]})`;
+    //alert(cardArray[cardNumber])
+    document.getElementById(cardId).style = `background: url(${cardArray[cardNumber]})`;
     //Store click1 and click2
-    if (userClick1==0) {
+    
+    if (userClick1==999) {
         userClick1 = cardNumber;
         userSelectedCard1 = cardId;
     }else{
@@ -15,10 +18,11 @@ function checkClickedCard(cardNumber, cardId){
         userSelectedCard2 = cardId;
     }
     //reset routine
-    if(userClick2!=0){
+    if(userClick2!=999){
         if(userClick1==userClick2){
             document.getElementById("msg").innerHTML = "goed gedaan!";
         }else{
+            
             document.getElementById("msg").innerHTML = "Fout";
             document.getElementById(userSelectedCard1).disabled = false;
             document.getElementById(userSelectedCard2).disabled = false;

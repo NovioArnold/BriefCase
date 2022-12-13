@@ -13,23 +13,24 @@
     <script src="js/getRandomInt.js"></script>
     <script src="js/shuffleCards.js"></script>
     <script src="js/cardArray.js"></script>
+    <script src="js/renderPlayingField.js"></script>
 
 </head>
 <body>
-    <div class="memory-container">
+    <!-- <div class="memory-container">
         <h1>Memory</h1>
         
         <input type="button" value="" id="kaart1" class="memory-card" onclick="checkClickedCard(1, 'kaart1')";  />
         <input type="button" value="" id="kaart2" class="memory-card" onclick="checkClickedCard(2, 'kaart2')";  />
         <input type="button" value="" id="kaart3" class="memory-card" onclick="checkClickedCard(1, 'kaart3')"; />
         <input type="button" value="" id="kaart4" class="memory-card" onclick="checkClickedCard(2, 'kaart4')"; />
-    </div>
-    <div class="playfield" id="playfield"></div>
+    </div> -->
+    <div class="playfield" id="play-field"></div>
    
 
     <div id="msg" class="msg"></div>
 
-<script>randomThaCards();renderPlayingField();alert('is this working?')</script>
+<script>renderPlayingField(randomThaCards())</script>
 
 
 </body>
