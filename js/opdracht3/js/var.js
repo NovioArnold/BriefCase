@@ -1,6 +1,6 @@
 //constants  and variables used in de game
-const userClick1 = 999;
-const userClick2 = 999;
-var userSelectedCard1 = "";
-var userSelectedCard2 = "";
+let userClick1 = 999;
+let userClick2 = 999;
+let userSelectedCard1 = "";
+let userSelectedCard2 = "";
 const numberOfCards = 4;

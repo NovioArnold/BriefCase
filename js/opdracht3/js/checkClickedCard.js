@@ -31,8 +31,8 @@ function checkClickedCard(cardNumber, cardId){
             document.getElementById(userSelectedCard1).style = "background: url('./assets/back_of_card.jpg')";
             document.getElementById(userSelectedCard2).style = "background: url('./assets/back_of_card.jpg')";
         }
-        userClick1 = 0;
-        userClick2 = 0;
+        userClick1 = 999;
+        userClick2 = 999;
 
     }
 }
