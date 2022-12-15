@@ -6,7 +6,6 @@ function checkClickedCard(cardNumber, cardId){
     //add value to card
     document.getElementById(cardId).value = cardNumber;
     //load the correct image from the asset folder cardArray.js
-    //alert(cardArray[cardNumber])
     document.getElementById(cardId).style = `background: url(${cardArray[cardNumber]})`;
     //Store click1 and click2
     

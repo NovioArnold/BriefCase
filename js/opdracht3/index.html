@@ -14,6 +14,7 @@
     <script src="js/shuffleCards.js"></script>
     <script src="js/cardArray.js"></script>
     <script src="js/renderPlayingField.js"></script>
+    <script src="js/resetGame.js"></script>
 
 </head>
 <body>
@@ -27,11 +28,14 @@
     </div> -->
     <h1 class="title">Memory game</h1>
     <div class="playfield" id="play-field"></div>
+    <button type="submit" id="reset" name="reset" onclick="resetGame()">Herstart</button>
    
 
     <div id="msg" class="msg"></div>
 
-<script>renderPlayingField(randomThaCards())</script>
+<script>
+    renderPlayingField(randomThaCards())
+</script>
 
 
 </body>
