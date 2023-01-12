@@ -15,6 +15,10 @@
     <script src="js/cardArray.js"></script>
     <script src="js/renderPlayingField.js"></script>
     <script src="js/resetGame.js"></script>
+    <script src="js/countClicks.js"></script>
+    
+
+
 
 </head>
 <body>
@@ -28,7 +32,8 @@
     </div> -->
     <h1 class="title">Memory game</h1>
     <div class="playfield" id="play-field"></div>
-    <button type="submit" id="reset" name="reset" onclick="resetGame()">Herstart</button>
+    <p class="rounds-played" id="rounds-played">Number of rounds played is: <span id="rounds-played-data"></span></p>
+    <INPUT TYPE=”button” onClick='history.go(0)' VALUE=Refresh>
    
 
     <div id="msg" class="msg"></div>

@@ -8,5 +8,7 @@ const cardArray = [
     './assets/5.png',
     './assets/6.png',
     './assets/7.png',
-    './assets/8.png'
+    './assets/8.png',
+
+    
 ];
