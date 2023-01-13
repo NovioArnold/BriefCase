@@ -17,6 +17,7 @@
     <script src="js/resetGame.js"></script>
     <script src="js/countClicks.js"></script>
     
+    
 
 
 
@@ -30,6 +31,7 @@
         <input type="button" value="" id="kaart3" class="memory-card" onclick="checkClickedCard(1, 'kaart3')"; />
         <input type="button" value="" id="kaart4" class="memory-card" onclick="checkClickedCard(2, 'kaart4')"; />
     </div> -->
+    <audio src="./assets/audio/3background.wav" autoplay loop controls id="background"></audio>
     <h1 class="title">Memory game</h1>
     <div class="playfield" id="play-field"></div>
     <p class="rounds-played" id="rounds-played">Number of rounds played is: <span id="rounds-played-data"></span></p>
@@ -37,6 +39,8 @@
    
 
     <div id="msg" class="msg"></div>
+    <audio src="./assets/audio/2success.wav" id="succes"></audio>
+    <audio src="./assets/audio/3fail.wav" id="fail"></audio>
 
 <script>
     renderPlayingField(randomThaCards())
