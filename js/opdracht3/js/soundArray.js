@@ -1,6 +1,6 @@
 const soundArray = [
-    './assets/audio/1-card-fail.aif',
-    './assets/audio/2-card-succes.aif',
-    './assets/audio/3-background.aif',
+    './assets/audio/1card-fail.wav',
+    './assets/audio/2card-success.wav',
+    './assets/audio/3background.wav',
 ]
 
