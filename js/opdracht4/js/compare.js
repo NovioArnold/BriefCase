@@ -31,7 +31,7 @@ function compareChoice(playersChoice, computerChoice, playerWins, computerWins){
         return;  
     }else{
     //loose            
-        //alert ('you loose');
+        
         document.getElementById('winner-card').innerHTML= '<p>you loose</p>';
         return 'computer'
     }

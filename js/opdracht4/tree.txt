@@ -1,0 +1,19 @@
+.
+├── assets
+│   ├── paper.png
+│   ├── rock.png
+│   └── scissors.png
+├── css
+│   └── styles.css
+├── index.html
+├── js
+│   ├── array.js
+│   ├── compare.js
+│   ├── compareToArray.js
+│   ├── functions.js
+│   ├── notNull.js
+│   └── variables.js
+├── opdracht.md
+└── tree.txt
+
+4 directories, 13 files
