@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/playField.css">
+    <title>Memory</title>
+    <script src="js/var.js"></script>
+    <script src="js/checkClickedCard.js"></script>
+    <script src="js/randomThaCards.js"></script>
+    <script src="js/getRandomInt.js"></script>
+    <script src="js/shuffleCards.js"></script>
+    <script src="js/cardArray.js"></script>
+    <script src="js/renderPlayingField.js"></script>
+    <script src="js/resetGame.js"></script>
+    <script src="js/countClicks.js"></script>
+    
+    
+
+
+
+</head>
+<body>
+    <!-- <div class="memory-container">
+        <h1>Memory</h1>
+        
+        <input type="button" value="" id="kaart1" class="memory-card" onclick="checkClickedCard(1, 'kaart1')";  />
+        <input type="button" value="" id="kaart2" class="memory-card" onclick="checkClickedCard(2, 'kaart2')";  />
+        <input type="button" value="" id="kaart3" class="memory-card" onclick="checkClickedCard(1, 'kaart3')"; />
+        <input type="button" value="" id="kaart4" class="memory-card" onclick="checkClickedCard(2, 'kaart4')"; />
+    </div> -->
+    <audio src="./assets/audio/3background.wav" autoplay loop controls id="background"></audio>
+    <h1 class="title">Memory game</h1>
+    <div class="playfield" id="play-field"></div>
+    <p class="rounds-played" id="rounds-played">Number of rounds played is: <span id="rounds-played-data"></span></p>
+    <INPUT TYPE=”button” onClick='history.go(0)' VALUE=Refresh>
+   
+
+    <div id="msg" class="msg"></div>
+    <audio src="./assets/audio/2success.wav" id="succes"></audio>
+    <audio src="./assets/audio/3fail.wav" id="fail"></audio>
+
+<script>
+    renderPlayingField(randomThaCards())
+</script>
+
+
+</body>
+</html>

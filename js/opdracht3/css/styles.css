@@ -1,0 +1,44 @@
+h1 {
+    text-align:center;
+    font-family: verdana;
+    font-size: 25px;
+    color: steelblue;
+}
+body {
+    background-color: #f1f2f3;
+    max-width: 500px;
+    margin: auto;
+}
+.title{
+    text-shadow: 10px 5px 5px #666;
+}
+.memory-container {
+    width: 240px;
+    height: 325px;
+    border: 1px solid #e9e9e9;
+    margin: auto;
+    background-color: #666;
+}
+.memory-card {
+    width: 100px;
+    height: 100px;
+    background-color: #0099ff;
+    margin: 10px;
+    border: 1px solid #d63030;
+    border-radius: 100%;
+    box-shadow: 10px 5px 5px #666;
+    margin: auto;
+    background-color: #999999;
+    font-size: 0px;
+    font-weight: hidden;
+    float: left;
+    background: url(../assets/back_of_card.jpg)
+}
+.msg {
+    width: 200px;
+    height: 100px;
+    margin: 0 auto;
+    font-size: 55px;
+    text-align: center;
+}
+

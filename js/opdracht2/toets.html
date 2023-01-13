@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toets</title>
+    <script>
+        var vraagEnAndwoordDict = {
+            vraag1:{vraag:'Wat is de hoofdstad van Spanje' ,andwoord: 'Madrid'},
+            vraag2:{vraag:'In welke zee ligt het eiland Mallorca', andwoord: 'Middelandse zee'},
+            vraag3:{vraag: 'Hoeveeel paar poten heeft een duizendpoot', andwoord: '15 paar'}
+    }
+    function contructFormulier(dict) {
+        let html = '<form action="POST">'
+        for (vraag in dict){
+            html = html+'<label for='+vraag+'>'+dict[vraag].vraag+'? </label><input type="text" name='+vraag+' id='+vraag+' required><br>';
+            
+        }
+        html = html+'</form>'
+        return html;
+    }
+    function checkForm(dict){
+        let awns = ''
+        
+        for (vraag in dict){
+            
+            let awn = ''
+            let vrg = document.getElementById(vraag).value;
+            console.log(vraag)
+            console.log(vrg)
+            if (vrg == dict[vraag].andwoord){
+                awn =  vrg +' is het juiste andwoord';
+            }
+            else{
+                awn =  vrg +' is niet het juiste andwoord, het juiste andwoord is: '+dict[vraag].andwoord;
+            }
+        awns = awns +'<br>'+ awn;
+        console.log(awns);
+        document.getElementById("andwoorden").innerHTML = awns;
+    }
+}
+    </script>
+</head>
+<body>
+    <h1 class="head">Toets</h1>
+    <p id="andwoorden"></p>
+    <input type="submit" value="Controleer andwoorden" onclick="checkForm(vraagEnAndwoordDict)">
+    
+   
+    <script>
+        
+        document.write(contructFormulier(vraagEnAndwoordDict));
+    </script>
+</body>
+</html>

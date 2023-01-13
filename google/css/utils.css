@@ -212,26 +212,11 @@
     margin-bottom: 4em;
 }
 
-/*grid configs*/
-.grid162 {
-    display: grid;
-    grid-template-columns: 1fr 6fr 2fr;
-    width: 100fr;
-    height: 100fr;
-    
+
+/* borders */
+
+.border-bottom-solid-2px {
+    border-bottom: 2px solid var(--dark);
 }
 
-.footer-flex {
-    display: flex;
-    flex-direction: row;
-
-    width: 100vh;
-}
-
-.flex3 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    max-height: 5vh;
-}
 

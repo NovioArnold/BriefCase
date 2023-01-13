@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, paper, scissors</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/array.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/variables.js"></script>
+    <script src="js/compare.js"></script>
+    <script src="js/compareToArray.js"></script>
+    <script src="js/notNull.js"></script>
+    
+    
+</head>
+<body><div id="game" class="game"></div>
+    <select name="option" id="player-choice">
+        <option value="default">make choice</option>
+        <option value="rock">rock</option>
+        <option value="paper">paper</option>
+        <option value="scissors">scissors</option>
+    </select>
+    <input type="button" value="submit" id="submit" name="submit" onClick=main()>
+    <input type="button" value="reset" name="reset" onClick=location.reload()>
+    <div class="card" id="card">
+         <div id="comp-choice"></div><div id="score"></div><div id="rounds"></div><div id="winner-card"></div>
+    </div>
+    <script>
+        rounds =  numberOfRounds - 1;
+        function main(){
+            
+              
+        
+            //main game logic
+            //get choices
+            //check if choice is made        
+            //alert (rounds);   
+            var value = notNull(document.getElementById('player-choice').value);
+            
+        
+            var computerChoice = getRandomInt(gameOptions.length -1);
+            //print the computers choice to the screen
+            document.getElementById("comp-choice").innerHTML = `<p>The computers choice is: ${gameOptions[computerChoice]}</p>`; 
+            
+              
+            var compval = compareChoice(compareToArray(value, gameOptions,), computerChoice);
+            if (compval === 'player'){
+                playerWins = playerWins + 1;
+            }
+            if (compval === 'computer'){
+                computerWins = computerWins + 1;
+            }
+            //TODO: - create render html. elementid score & rounds to go      
+            //alert('the score is: player'+playerWins+' computer'+computerWins);
+            document.getElementById('score').innerHTML= `<p>the score is: player ${playerWins} vs computer ${computerWins}</p>`;
+            //alert (rounds-1 +' to go!')
+            document.getElementById('rounds').innerHTML = `<p>Round ${numberOfRounds - rounds} of ${numberOfRounds} `;
+            if (rounds == 0){
+                    
+                    
+                if (playerWins > computerWins){
+                    document.getElementById('winner-card').innerHTML = `<p>you have won with a score of ${playerWins} to ${computerWins} </p>`;
+                }
+                else if (computerWins > playerWins){
+                    document.getElementById('winner-card').innerHTML = `<p>computer has won with a score of ${playerWins} to ${computerWins} </p>`;
+                }
+                else{
+                    document.getElementById('winner-card').innerHTML = `<p>its a draw with a score of ${playerWins} to ${computerWins}</p>`;
+                }
+                
+                document.getElementById('submit').setAttribute('disabled', true);  
+            }
+                
+            
+        
+           
+            rounds--;
+            
+            
+        }    
+    </script>  
+</body>
+</html>

@@ -1,0 +1,1 @@
+const gameOptions = ['rock','paper','scissors'];

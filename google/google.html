@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google clone</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/containers.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/variable.css">
     <link rel="stylesheet" href="css/utils.css">
+    
 </head>
 <body>
   <div class="container">
@@ -27,12 +30,18 @@
         </div>
     </nav>
     <main class="main-window m3 p3">
-        <div class="flex-container p1 m1">
+        <div class="flex-container main-content">
             <h1 class="google-title">Google</h1>
-            <input type="text" class="searchbox"><br>
-            <input type="button" value="google" class="google">
-            <input type="button" value="ik doe een gok" class="gamble">
-            <p class="flex-container">Google aangeboden in:
+            <ul class="options flex-container">
+                <li class="search-items"><input type="text" class="searchbox"></li>
+                <li class="search-items"><input type="button" value="google" class="google"></li>
+                <li class="search-items"><input type="button" value="ik doe een gok" class="gamble"></li>
+                <li class="search-items"></li>
+            </ul>
+            
+            
+            
+            <p class="flex-container lang-select">Google aangeboden in:
                <a class="my1" href="#">Frysk</a>
                <a class="my1" href="#">English</a>  
             </p>
@@ -41,15 +50,15 @@
 
     </main>
     <footer>
-        <div class="grid-container-3 m1 p1">
-            <a href="#" class="nederlands">Nederlands</a>
-            <ul class="left-items no-symbols">
+        <div class="grid-container-3 m1">
+            <a href="#" class="nederlands border-bottom-solid-2px mt1">Nederlands</a>
+            <ul class="left-items no-symbols border-bottom-solid-2px mt1">
                 <li class="item">one</li>
                 <li class="item">two</li>
                 <li class="item">three</li>
             </ul>
-            <a href="#" class="co2">co2 thingy</a>
-            <ul class="right-items no-symbols">
+            <a href="#" class="co2 border-bottom-solid-2px mt1">co2 thingy</a>
+            <ul class="right-items no-symbols border-bottom-solid-2px mt1">
                 <li class="item">one</li>
                 <li class="item">two</li>
                 <li class="item">three</li>
