@@ -1,4 +1,5 @@
 // array of all the cards faces
+//add more cards by adding them to this array
 
 const cardArray = [
     './assets/images/1.png',

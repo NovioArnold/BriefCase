@@ -2,13 +2,8 @@
 let rounds = count
 
 
-function checkClickedCard(cardNumber, cardId){
-    //var backgroundMusic = document.createElement('audio');
-    //backgroundMusic.src = './assets/audio/3background.wav';
-    //console.log(backgroundMusic.src);
-    //document.getElementById('backgroundMusic').play();
-    //Disable selected card, you can only click once on the selected card.
-    
+function checkClickedCard(cardNumber, cardId){  
+    //Disable selected card, you can only click once on the selected card.    
     document.getElementById(cardId).disabled = true;
     //add value to card
     document.getElementById(cardId).value = cardNumber;
@@ -35,6 +30,8 @@ function checkClickedCard(cardNumber, cardId){
             
             soundSuccess.play();
         }else{
+            soundFail.play();
+            //set a sleep befor turning over the cards
             setTimeout(function(){
                 document.getElementById("msg").innerHTML = "Fout";
                 document.getElementById(userSelectedCard1).disabled = false;
@@ -43,7 +40,7 @@ function checkClickedCard(cardNumber, cardId){
                 document.getElementById(userSelectedCard2).value=  "";
                 document.getElementById(userSelectedCard1).style = "background: url('./assets/images/back_of_card.jpg')";
                 document.getElementById(userSelectedCard2).style = "background: url('./assets/images/back_of_card.jpg')";
-                soundFail.play();
+                
 
             }, 1000);
             console.log("setTimeout() example...");

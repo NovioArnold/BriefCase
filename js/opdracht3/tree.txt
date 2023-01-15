@@ -29,9 +29,7 @@
 │   ├── getRandomInt.js
 │   ├── randomThaCards.js
 │   ├── renderPlayingField.js
-│   ├── resetGame.js
 │   ├── shuffleCards.js
-│   ├── sounds.js
 │   └── var.js
 ├── readme.md
 └── tree.txt
