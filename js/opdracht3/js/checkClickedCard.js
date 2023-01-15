@@ -1,8 +1,6 @@
 
 let rounds = count
-let backgroundMusic = './assets/audio/3background.wav'
-let soundSuccess = new Audio('./assets/audio/2success.wav')
-let soundFail = new Audio ('./assets/audio/1fail.wav')
+
 
 function checkClickedCard(cardNumber, cardId){
     //var backgroundMusic = document.createElement('audio');
@@ -43,8 +41,8 @@ function checkClickedCard(cardNumber, cardId){
                 document.getElementById(userSelectedCard2).disabled = false;
                 document.getElementById(userSelectedCard1).value = "";
                 document.getElementById(userSelectedCard2).value=  "";
-                document.getElementById(userSelectedCard1).style = "background: url('./assets/back_of_card.jpg')";
-                document.getElementById(userSelectedCard2).style = "background: url('./assets/back_of_card.jpg')";
+                document.getElementById(userSelectedCard1).style = "background: url('./assets/images/back_of_card.jpg')";
+                document.getElementById(userSelectedCard2).style = "background: url('./assets/images/back_of_card.jpg')";
                 soundFail.play();
 
             }, 1000);
