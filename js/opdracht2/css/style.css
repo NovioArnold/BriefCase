@@ -1,0 +1,76 @@
+html{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    margin-top: 20px;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: wheat;
+    max-width: 1000px;
+    width: 1000px;
+    margin: auto;
+    background-color: navy;
+    text-align: center;
+    border: 2px solid silver;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 10px 5px 5px black;
+
+
+}
+
+.navbar {
+    display: flex;
+    width: 1000px;
+    flex-direction: row;
+    color: wheat;
+    text-decoration: none;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+span  {
+    text-decoration: none;
+    color: orange;
+    border: 3px solid wheat;
+    border-radius: 10px;
+    padding: 4px;
+    font-size: large;
+
+}
+
+span:hover{
+    font-size: large + 5px;
+    font-weight: bolder;
+    color: whitesmoke;
+
+}
+
+#andwoorden{
+    border: 2px solid silver;
+    border-radius: 10px ;
+    box-shadow: 10px 5px 5px #666;
+    background-color: steelblue;
+    color: orange
+}
+
+.game{
+    border: 2px solid silver;
+    border-radius: 10px ;
+    box-shadow: 10px 5px 5px #666;
+    background-color: steelblue;
+    color: orange;
+    padding: 10px;
+}
+
+.button-bar{
+    border: 2px solid silver;
+    border-radius: 10px ;
+    box-shadow: 10px 5px 5px #666;
+    background-color: steelblue;
+    color: orange;
+    padding: 10px;
+}
