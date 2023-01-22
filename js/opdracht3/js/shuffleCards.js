@@ -1,13 +1,18 @@
+// shuffle the playing cards
+
 function shuffleCards(){
+    //empties div with classname memory_cards
     document.getElementById("memory_cards").innerHTML = '';
-    cardArr = new Array();
-     for(i=0; i<numberOfCards/2; i++){
-            cardsArr.push(i);
-            cardsArr.push(i);
-            console.log(cardsArr)
+    //init array
+    let cardArr = new Array();
+    //fill cardArr with pairs of cards
+     for(index=0; index<numberOfCards/2; index++){
+            cardsArr.push(index);
+            cardsArr.push(index);
      }
+    //Generate html for each card
     while(cardsArr.length>0){
-        var randomNumber =getRandomInt(cardsArr.length);
+        let randomNumber =getRandomInt(cardsArr.length);
         document.getElementById('memory_cards').innerHTML +=
         '<input type="button" value="' + 
         cardArr[randomNumber] +

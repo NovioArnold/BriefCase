@@ -9,6 +9,11 @@ body {
     max-width: 500px;
     margin: auto;
 }
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .title{
     text-shadow: 10px 5px 5px #666;
 }
@@ -32,7 +37,7 @@ body {
     font-size: 0px;
     font-weight: hidden;
     float: left;
-    background: url(../assets/back_of_card.jpg)
+    background: url(../assets/images/back_of_card.jpg)
 }
 .msg {
     width: 200px;

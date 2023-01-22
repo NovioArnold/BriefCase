@@ -1,4 +1,4 @@
-// gets a random in between o and max
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
+// gets a random in between 0 and length of the array
+function getRandomInt(arrayLength) {
+    return Math.floor(Math.random() * arrayLength);
 }
