@@ -16,7 +16,8 @@
 │   ├── array.js
 │   ├── compare.js
 │   ├── compareToArray.js
-│   ├── functions.js
+│   ├── getRandomInt.js
+│   ├── main.js
 │   ├── notNull.js
 │   └── variables.js
 ├── readme.md
@@ -37,15 +38,22 @@ hoofpagina
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, paper, scissors</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/array.js"></script>
-    <script src="js/functions.js"></script>
-    <script src="js/variables.js"></script>
-    <script src="js/compare.js"></script>
-    <script src="js/compareToArray.js"></script>
-    <script src="js/notNull.js"></script>
+    <script src="./js/array.js"></script>
+    <script src="./js/getRandomInt.js"></script>
+    <script src="./js/variables.js"></script>
+    <script src="./js/compareChoice.js"></script>
+    <script src="./js/compareToArray.js"></script>
+    <script src="./js/notNull.js"></script>
+    <script src="./js/main.js"></script>
+
     
     
 </head>
+
+<nav>
+    <h1 class="title">Rock, Paper, and Scissors Game</h1>
+    <a class='nav-item 'href="readme.html">Documentation</a></nav>
+<hr>
 <body><div id="game" class="game"></div>
     <select name="option" id="player-choice">
         <option value="default">make choice</option>
@@ -58,58 +66,9 @@ hoofpagina
     <div class="card" id="card">
          <div id="comp-choice"></div><div id="score"></div><div id="rounds"></div><div id="winner-card"></div>
     </div>
-    <script>
-        rounds =  numberOfRounds - 1;
-        function main(){
-            //main game logic
-            
-           
-            // get the player choice  
-            var value = notNull(document.getElementById('player-choice').value);
-            
-            //generate the computers choice
-            var computerChoice = getRandomInt(gameOptions.length -1);
-            //print the computers choice to the screen
-            document.getElementById("comp-choice").innerHTML = `<p>The computers choice is: ${gameOptions[computerChoice]}</p>`; 
-            
-            // compare computer choice with the players choice
-            var compval = compareChoice(compareToArray(value, gameOptions,), computerChoice);
-            if (compval === 'player'){
-                playerWins = playerWins + 1;
-            }
-            if (compval === 'computer'){
-                computerWins = computerWins + 1;
-            }  
-            // print score to screen
-            document.getElementById('score').innerHTML= `<p>the score is: player ${playerWins} vs computer ${computerWins}</p>`;
-
-            document.getElementById('rounds').innerHTML = `<p>Round ${numberOfRounds - rounds} of ${numberOfRounds} `;
-            if (rounds == 0){
-                    
-                    
-                if (playerWins > computerWins){
-                    document.getElementById('winner-card').innerHTML = `<p>you have won with a score of ${playerWins} to ${computerWins} </p>`;
-                }
-                else if (computerWins > playerWins){
-                    document.getElementById('winner-card').innerHTML = `<p>computer has won with a score of ${playerWins} to ${computerWins} </p>`;
-                }
-                else{
-                    document.getElementById('winner-card').innerHTML = `<p>its a draw with a score of ${playerWins} to ${computerWins}</p>`;
-                }
-                
-                document.getElementById('submit').setAttribute('disabled', true);  
-            }
-                
-            
-        
-           //subtract 1 round
-            rounds--;
-            
-            
-        }    
-    </script>  
 </body>
 </html>
+
 ```
 
 ## array.js
@@ -121,7 +80,61 @@ spel opties
 const gameOptions = ['rock','paper','scissors'];
 ```
 
-##compare.js
+## main.js
+
+dit is de hoofd spel routine 
+
+```javascript
+
+//main game loop
+rounds = numberOfRounds - 1;
+function main(){
+    //main game logic
+
+    //get players choice
+    var value = notNull(document.getElementById('player-choice').value);
+    
+    //get computers choice
+    var computerChoice = getRandomInt(gameOptions.length -1);
+    //print the computers choice to the screen
+    document.getElementById("comp-choice").innerHTML = `<p>The computers choice is: ${gameOptions[computerChoice]}</p>`; 
+    
+    //sees who wins the computer or the player
+    var compval = compareChoice(compareToArray(value, gameOptions,), computerChoice);
+    if (compval === 'player'){
+        playerWins = playerWins + 1;
+    }
+    if (compval === 'computer'){
+        computerWins = computerWins + 1;
+    }
+    //Print the scoreboard
+    document.getElementById('score').innerHTML= `<p>the score is: player ${playerWins} vs computer ${computerWins}</p>`;
+    //alert (rounds-1 +' to go!')
+    document.getElementById('rounds').innerHTML = `<p>Round ${numberOfRounds - rounds} of ${numberOfRounds} `;
+    if (rounds == 0){
+            
+        //genertate end screen card 
+        if (playerWins > computerWins){
+            document.getElementById('winner-card').innerHTML = `<p>you have won with a score of ${playerWins} to ${computerWins} </p>`;
+        }
+        else if (computerWins > playerWins){
+            document.getElementById('winner-card').innerHTML = `<p>computer has won with a score of ${playerWins} to ${computerWins} </p>`;
+        }
+        else{
+            document.getElementById('winner-card').innerHTML = `<p>its a draw with a score of ${playerWins} to ${computerWins}</p>`;
+        }
+        
+        document.getElementById('submit').setAttribute('disabled', true);  
+    }
+        
+    
+
+   
+    rounds--;
+}
+```
+
+## compareChoice.js
 
 vergelijkt de speler zijn keuze met die van de computer
 
@@ -183,7 +196,7 @@ function compareToArray(value, array){
 }
 ```
 
-## functions.js
+## getRandomInt.js
 
 genereerd een willekeurige int met een waarde die de lengete van het array heeft incl 0
 
@@ -223,7 +236,7 @@ spel data
 //stores the players choice
 let playersChoice = 0;
 //stores the computers choice
-let compareChoice = 0;
+let computerChoice = 0;
 //the number of rounds that will be played
 const numberOfRounds = 3;
 //the computers score

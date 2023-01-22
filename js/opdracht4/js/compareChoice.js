@@ -1,5 +1,5 @@
 function compareChoice(playersChoice, computerChoice, playerWins, computerWins){
-    
+
     //wins
     if (playersChoice  == 0 && computerChoice == 2){
         document.getElementById('winner-card').innerHTML= '<p>you win</>';
