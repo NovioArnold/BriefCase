@@ -82,7 +82,23 @@ const gameOptions = ['rock','paper','scissors'];
 
 ## main.js
 
-dit is de hoofd spel routine 
+dit is de spel routine.
+1. spelers keuze
+2. computers keuze
+3. check wie de winnaar is  --> zou in een v.2.0 een apparte functie worden. Voorbeeld:
+
+```javascript
+let compval = whoWins();
+# adds the points to the correct winner.
+```
+
+4. print de scoreboard -> zou in een v.2.0 een screencard apparte functie worden.
+
+```javascript
+generateScoreCard();
+
+```
+
 
 ```javascript
 
