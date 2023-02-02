@@ -12957,3 +12957,5 @@ python/Scripts/tk86t.dll
 python/Scripts/unicodedata.pyd
 python/Scripts/vcruntime140.dll
 python/Scripts/winsound.pyd
+sql/opdracht5/.env
+sql/opdracht5/Dockerfile

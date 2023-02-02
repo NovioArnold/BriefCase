@@ -8,7 +8,10 @@
     <script>
         function checkForm(){
             let getal = document.getElementById('getal').value;
-            if(getal < 0 || getal >=10){
+            if (isNaN(getal)){
+                alert('Please enter a number');
+            }
+            else if(getal < 0 || getal >=10){
                 document.getElementById("text").innerHTML = 'het ingevulde getal is onjuist....';
             }
             else{

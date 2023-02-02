@@ -46,4 +46,15 @@ body {
     font-size: 55px;
     text-align: center;
 }
+.button{
+    border: 3px solid #255;
+    border-radius: 5px;
+    padding : 10px 10px 10px 10px;
+    background-color: steelblue;
+    color: orange;
+}
+
+a {
+    text-decoration: none;
+}
 
