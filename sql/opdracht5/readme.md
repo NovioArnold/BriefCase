@@ -1,4 +1,35 @@
+
+
 # SQL opdracht 5
+
+## startup docker container
+
+start the container
+
+```bash
+
+docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql
+
+```
+
+container cli access
+
+```bash
+docker exec -it some-mysql bash
+
+```
+
+open mysql prompt
+
+```bash
+
+mysql -uroot -p
+
+```
+
+
+
+
 
 ## opdracht 5.1 Database
 
