@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Arnold Hilberink's Portfolio",
+  "name": "Created by Arnold using React, Material UI and Django",
   "icons": [
     {
       "src": "favicon.ico",
