@@ -1,7 +1,0 @@
-CREATE TABLE IF NOT EXISTS topics (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    topic_name VARCHAR(255) NOT NULL,
-    topic_link VARCHAR(255) NOT NULL,
-    subject_id INTEGER,
-    FOREIGN KEY (subject_id) REFERENCES subjects(id) ON DELETE CASCADE
-);

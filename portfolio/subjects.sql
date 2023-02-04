@@ -1,5 +1,0 @@
-CREATE TABLE IF NOT EXISTS subjects(
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    subject_name VARCHAR(255) NOT NULL,
-    subject_link VARCHAR(255) NOT NULL,
-);
