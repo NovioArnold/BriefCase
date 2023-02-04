@@ -12959,9 +12959,4 @@ python/Scripts/vcruntime140.dll
 python/Scripts/winsound.pyd
 sql/opdracht5/.env
 sql/opdracht5/Dockerfile
-portfolio/portfolio_backend/.env
-portfolio/portfolio_frondend/node_modules
-portfolio/portfolio_backend/portfolio/bin
-portfolio/portfolio_backend/portfolio/include
-portfolio/portfolio_backend/portfolio/lib
-portfolio/portfolio_backend/portfolio/
+
